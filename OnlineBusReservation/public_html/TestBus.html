@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script src="js/angular.min.js" type="text/javascript"></script>
+        <script src="jquery/jquery-1.11.3.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/bus.css" rel="stylesheet" type="text/css"/>
+         <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/> -->
+       <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+        <script src="js/app/eventapp.js" type="text/javascript"></script>
+        <script src="js/modal/BusModal.js" type="text/javascript"></script>
+        <title>Online Modal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-app="mymodal">
+        <div ng-controller="MainCtrl" class="container">
+            <h1>Bus Seat Selection</h1>
+            <button ng-click="toggleModal()" class="btn btn-default">Open modal</button>
+
+            <modal title="Login form" visible="showModal">
+                <div id="holder" >
+                    <table id="place">
+                        <tbody ng-repeat="row in rowapha">
+                            <tr><td >{{row}}</td>
+                                <td  ng-repeat="col in cols" ng-click="seatselection(row, col)"><img ng-src="{{getUrl(row, col)}}">{{col}}</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr><td ></td>
+                                <td  style="height:20px" ng-repeat="col in cols" ><img src=""/></td>
+                            </tr>
+                        </tbody>
+                        <tbody ng-repeat="row in rowapha2">
+                            <tr><td >{{row}}</td>
+                                <td  ng-repeat="col in cols" ng-click="seatselection(row, col)"><img ng-src="{{getUrl(row, col)}}">{{col}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul id="seatDescription">
+                    <li style="background:url('resources/images/available_seat_img.gif') no-repeat scroll 0 0 transparent;">Available Seat</li>
+                    <li style="background:url('resources/images/booked_seat_img.gif') no-repeat scroll 0 0 transparent;">Booked Seat</li>
+                    <li style="background:url('resources/images/selected_seat_img.gif') no-repeat scroll 0 0 transparent;">Selected Seat</li>
+                </ul>
+                <div style="clear:both;width:100%">
+                    <input type="button" id="btnShowNew" ng-click="showBookedSteats()" value="Show Selected Seats" />
+                    <input type="button" id="btnShow" value="Show All" />           
+                </div>
+                
+            </modal>
+        </div>
+</html>

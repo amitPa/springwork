@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2016, 10:21:53 PM
+    Author     : AmitPandey
+*/
+
+img {
+    height:inherit;
+}
+#main-header{
+    font-size:12px;
+    background:#00B9F5;
+}
+
+#main-header .blue-bar {
+    background: #F5F8F9;
+    height: 53px;
+}
+
+#main-header .blue-bar .layout-padding, #main-header .blue-bar .layout-padding>.flex, #main-header .blue-bar .layout-padding>.flex-gt-sm, #main-header .blue-bar .layout-padding>.flex-lt-lg, #main-header .blue-bar .layout-padding>.flex-md {
+    padding: 2px 0;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.layout-fill {
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+}
+.layout-padding, .layout-padding>.flex, .layout-padding>.flex-gt-sm, .layout-padding>.flex-lt-lg, .layout-padding>.flex-md {
+    padding: 8px;
+}
+.layout-row {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+.layout {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.f1{
+    float:left !important;
+}
+
+.fr{
+    float:right !important;
+}
+
+#main-header .blue-bar .fr{
+    padding:0 !important;
+    text-align: right;
+    width:79%;
+}
+
+#main-header .blue-bar div:nth-child(2){
+    text-align:right;
+}
+
+#main-header #user-detail {
+    background: #fff;
+    height: 73px;
+}
+
+
+
