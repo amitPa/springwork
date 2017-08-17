@@ -1,0 +1,4 @@
+jwtToken\token\domain\TokenInfo.class
+jwtToken\token\App.class
+jwtToken\token\Token.class
+jwtToken\token\domain\Auth.class
